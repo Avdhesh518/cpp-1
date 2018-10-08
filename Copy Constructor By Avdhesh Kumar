@@ -1,0 +1,37 @@
+#include<iostream.h>
+#include<string.h>
+#include<conio.h>
+class student
+{
+     int roll;
+     char name[20];
+     int total_marks;
+     public:
+         student(int r, char n[], int t)
+         {
+             roll = r
+             strcpy(name, n)
+             total_marks = t;
+         }
+         student(student &s)
+         {
+            roll = s.roll
+            strcpy(name, s.name)
+            total_marks = s.total_marks
+         }
+         void show_data()
+         {
+             cout<<endl<<"Roll no ="<<roll;
+             cout<<endl<<"Name = ",<<name;
+             cout<<endl<<"Total Marks ="<<total_marks
+         }
+};
+
+void main()
+{
+      student stu1(5, "Amit Singh", 80)    //use of parameterised constructor
+      student stu2(stu1)                   //use of copy constructror
+      stu1.show_data();
+      stu2.show_data();
+      getch();
+}      
